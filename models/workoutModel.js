@@ -13,36 +13,26 @@ const WorkoutSchema = new Schema({
     {
       type: {
         type: String,
-        trim: true,
-        required: "Please enter excercise type"
+        trim: true
       },
       name: {
         type: String,
-        trim: true,
-        required: "Please name your excercise"
+        trim: true
       },
 
       duration: {
-        type: Number,
-        required: "Please provide a duration",
-        match: [/^[0-9][A-Za-z0-9 -]*$/, "Please enter a number"]
+        type: Number
       },
 
       weight: {
-        type: Number,
-        required: "Please provide a weight",
-        match: [/^[0-9][A-Za-z0-9 -]*$/, "Please enter a number"]
+        type: Number
       },
 
       reps: {
-        type: Number,
-        required: "Please provide the number of reps",
-        match: [/^[0-9][A-Za-z0-9 -]*$/, "Please enter a number"]
+        type: Number
       },
       sets: {
-        type: Number,
-        required: "Please provide the number of sets",
-        match: [/^[0-9][A-Za-z0-9 -]*$/, "Please enter a number"]
+        type: Number
       }
     }
   ]
