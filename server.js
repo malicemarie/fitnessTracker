@@ -17,11 +17,14 @@ app.use(express.static(`public`));
 
 app.use(logger(`dev`));
 
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost/budget`, {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  process.env.MONGODB_URI || `mongodb://localhost/mongoHeadlines`,
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }
+);
 
 app.use(htmlRoutes, apiRoutes);
 
